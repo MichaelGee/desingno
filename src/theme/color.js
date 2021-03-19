@@ -7,6 +7,6 @@ export const colors = {
     secondary:{
         peach: "hsl(11, 100%, 80%)",
         black: "hsl(264, 5%, 20%)",
-        white: "hsl(210, 17%, 95%)"
+        white: "rgb(241, 243, 245)"
     }
 }

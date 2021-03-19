@@ -32,6 +32,7 @@ const Container = styled.div`
 const Links = styled.p`
  text-transform: uppercase;
  margin-right: 2rem;
+ letter-spacing: 3px;
 `
 
 const Menu = styled.div`
