@@ -4,7 +4,7 @@ export const Button = styled.button`
 border: none;
 text-decoration: none;
 text-transform: uppercase;
-padding: 1.3rem 2rem;
+padding: 1rem 2rem;
 font-size: ${({theme}) => theme.font.size.small};
 background: ${props => (props.alt ? '$#FFFFFF' : '#E7816B')};
 border-radius: 0.8rem;
