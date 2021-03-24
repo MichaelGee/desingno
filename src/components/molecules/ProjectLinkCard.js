@@ -7,8 +7,8 @@ import styled from '@emotion/styled'
 
 const Container = styled.div`
     width: 100%;
+    height: 100%;
     padding: 10rem 4rem;
-    height: auto;
     border-radius: 2rem;
     position: relative;
 `
@@ -44,7 +44,7 @@ const Overlay = styled.div`
     border-radius: 2rem;
 `
 const Image = styled.div`
-    background: url(${image}) no-repeat center center;
+    background: url(${(props)=>props.link}) no-repeat center center;
     position: absolute;
     top:0;
     left: 0;
@@ -59,7 +59,7 @@ const Image = styled.div`
 export const ProjectLinkCard = ({text, link}) => {
     return (
         <Container>
-            <Image/>
+            <Image link={link}/>
            <Overlay>
            <MainText>{text}</MainText>
           <Box display="flex" justifyContent="space-between" >

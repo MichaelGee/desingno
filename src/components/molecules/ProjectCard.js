@@ -3,10 +3,17 @@ import React from 'react'
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-  max-width: 40rem;
+ width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:center;
+  
+
+ 
 `;
 const Image = styled.img`
-  width: 100%;
+  width: 70%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   object-fit: cover;
@@ -15,7 +22,6 @@ const Image = styled.img`
   display: block;
 `;
 const Bottom  = styled.div`
-   background: #FDF3F0;
    padding: 4rem 2rem;
    text-align:center;
    border-bottom-left-radius: 15px;
@@ -24,16 +30,18 @@ const Bottom  = styled.div`
 `;
 const MainText = styled.h1`
     font-size: ${({theme}) => theme.font.size.normal};
-    color: ${({theme}) => theme.colors.primary.peach};
+    color: ${({theme}) => theme.colors.primary.black};
     font-weight: 500;
     letter-spacing: 5px;
     text-transform: uppercase;
     ${({ theme }) => theme.mq.sm`
     font-size: ${theme.font.size.large};
+    margin: 4rem 0;
   `}
 `;
 const SubText = styled.p`
     font-size: ${({theme}) => theme.font.size.tiny};
+    font-weight: 400;
     ${({ theme }) => theme.mq.sm`
      font-size: ${theme.font.size.normal};
   `}

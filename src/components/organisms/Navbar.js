@@ -10,7 +10,8 @@ import {useMedia} from 'react-use';
 const Container = styled.div`
  position: relative;
  background: #fff;
- padding: 2rem 0;
+ padding: 4rem 4rem;
+ z-index: 3;
  svg{
     cursor: pointer
 }
@@ -41,11 +42,13 @@ const Menu = styled.div`
  top: 3rem;
  left: 0;
  right: 0;
- transform: ${({ open }) => open ? 'translateY(20%)' : 'translateY(-180%)'};
+ transform: ${({ open }) => open ? 'translateY(59%)' : 'translateY(-180%)'};
  transition: transform 0.3s ease-in-out;
  padding: 2rem;
  width: 100%;
  z-index: -5;
+ display: flex;
+ flex-direction:column;
 `
 
 const Items = styled.p`

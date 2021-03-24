@@ -8,6 +8,7 @@ import styled from '@emotion/styled'
 const Container = styled.div`
 background: ${({theme}) => theme.colors.primary.black};
 padding: 4rem 6rem 2rem 6rem;
+position: relative;
 `
 const Top = styled.div`
 display: flex;
@@ -77,9 +78,10 @@ const Icons = styled.div`
        margin-right: 1rem;
    }
 `
-export const Footer = () => {
+export const Footer = ({children}) => {
     return (
         <Container>
+          {children}
         <Top>
         <WhiteLogo size="15rem" />
         <LinkList>
