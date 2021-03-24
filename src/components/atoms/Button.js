@@ -17,3 +17,4 @@ cursor:pointer;
     color: ${({theme}) => theme.colors.primary.white};
 }
 `
+

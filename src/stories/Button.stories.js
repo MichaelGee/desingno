@@ -5,7 +5,7 @@ import { text } from '@storybook/addon-knobs';
 
 const stories = storiesOf('Button', module);
 
-stories.add('button', () => <Button> {text('Text', 'Learn more')}</Button>);
+stories.add('button', () => <Button > {text('Text', 'Learn more')}</Button>);
 
 
 

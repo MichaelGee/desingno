@@ -1,11 +1,14 @@
 import { Global } from '@emotion/react';
+import RouterComponent from './Router';
+import { ThemeProvider } from './ThemeContext';
 import globalStyle from './GlobalStyles'
 
 function App() {
   return (
-    <div >
-       <Global styles={globalStyle}/> 
-    </div>
+    <ThemeProvider>
+      <Global styles={globalStyle} /> 
+      <RouterComponent/>
+      </ThemeProvider>
   );
 }
 

@@ -1,84 +1,64 @@
-import { Box } from 'rebass'
 import PropTypes from 'prop-types';
 import React from 'react'
-import Right from '../atoms/icons/Right'
-import image from '../../assets/images/one.jpg';
-import styled from '@emotion/styled'
+import styled from '@emotion/styled';
 
 const Container = styled.div`
-    width: 100%;
-    padding: 10rem 4rem;
-    height: auto;
-    border-radius: 2rem;
-    position: relative;
-`
-const MainText = styled.div`
+  max-width: 40rem;
+`;
+const Image = styled.img`
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+  display: block;
+`;
+const Bottom  = styled.div`
+   background: #FDF3F0;
+   padding: 4rem 2rem;
+   text-align:center;
+   border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+   
+`;
+const MainText = styled.h1`
+    font-size: ${({theme}) => theme.font.size.normal};
+    color: ${({theme}) => theme.colors.primary.peach};
+    font-weight: 500;
+    letter-spacing: 5px;
     text-transform: uppercase;
-    color: ${({theme}) => theme.colors.primary.white};
-    font-size: ${({theme}) => theme.font.size.large};
+    ${({ theme }) => theme.mq.sm`
+    font-size: ${theme.font.size.large};
+  `}
+`;
+const SubText = styled.p`
+    font-size: ${({theme}) => theme.font.size.tiny};
+    ${({ theme }) => theme.mq.sm`
+     font-size: ${theme.font.size.normal};
+  `}
 `
-const Subtext = styled.h3`
-    text-transform: uppercase;
-    color: ${({theme}) => theme.colors.primary.white};
-    font-size: ${({theme}) => theme.font.size.small};
-    letter-spacing: 1px;
-    margin-right: 1rem;
-    cursor: pointer;
-    text-decoration: none;
-    &:hover{
-        text-decoration: underline;
-    }
-`
-const Overlay = styled.div`
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 2rem;
-`
-const Image = styled.div`
-    background: url(${image}) no-repeat center center;
-    position: absolute;
-    top:0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    filter: grayscale(100%);
-    border-radius: 2rem;
-    background-size: cover;
- `
 
-export const ProjectCard = ({text, link}) => {
+export const ProjectCard = ({heading, sub, imgUrl}) => {
     return (
         <Container>
-            <Image/>
-           <Overlay>
-           <MainText>{text}</MainText>
-          <Box display="flex" justifyContent="space-between" >
-              <Subtext as='a' href={link}>View Projects</Subtext>
-              <Right size='0.6rem'/>
-          </Box>
-           </Overlay>
+            <Image src={imgUrl}/>
+            <Bottom>
+                <MainText>{heading}</MainText>
+                <SubText>{sub}</SubText>
+            </Bottom>
         </Container>
     )
 }
 
-
 ProjectCard.defaultProps = {
-    text: "App design",
-    link: "/"
+  heading: 'Photon',
+  sub: 'A state-of-the-art music player with high-resolution audio and DSP effects',
+  imgUrl: 'https://picsum.photos/200/'
 }
 
 ProjectCard.propTypes = {
-    text: PropTypes.string,
-    link: PropTypes.string
+  heading: PropTypes.string,
+  sub: PropTypes.string,
+  imgUrl: PropTypes.string
 }
-
