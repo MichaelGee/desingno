@@ -4,6 +4,7 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import { PageWrapper } from './components/organisms/PageWrapper';
 
 const Home = lazy(()=> import('./pages/Home'));
+const WebDesign = lazy(()=> import('./pages/WebDesign'));
 
 
 const RouterComponent =()=>{
@@ -12,7 +13,8 @@ const RouterComponent =()=>{
         <Suspense fallback={<div/>}>
         <Switch>
             <PageWrapper>
-            <Route path="/" component={Home} />
+            <Route exact path="/" component={Home} />
+            <Route path="/webdesign" component={WebDesign}/>
             </PageWrapper>
         </Switch>
         </Suspense>

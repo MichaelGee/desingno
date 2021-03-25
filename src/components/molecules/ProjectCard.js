@@ -13,7 +13,7 @@ const Container = styled.div`
  
 `;
 const Image = styled.img`
-  width: 70%;
+  width: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   object-fit: cover;
@@ -22,6 +22,7 @@ const Image = styled.img`
   display: block;
 `;
 const Bottom  = styled.div`
+  background: ${({color}) => (color === true ? '#FDF3F0' : null)};
    padding: 4rem 2rem;
    text-align:center;
    border-bottom-left-radius: 15px;
@@ -30,13 +31,13 @@ const Bottom  = styled.div`
 `;
 const MainText = styled.h1`
     font-size: ${({theme}) => theme.font.size.normal};
-    color: ${({theme}) => theme.colors.primary.black};
+    color: ${({theme}) => theme.colors.primary.peach};
     font-weight: 500;
     letter-spacing: 5px;
     text-transform: uppercase;
     ${({ theme }) => theme.mq.sm`
     font-size: ${theme.font.size.large};
-    margin: 4rem 0;
+    margin: 3rem 0;
   `}
 `;
 const SubText = styled.p`
@@ -47,11 +48,11 @@ const SubText = styled.p`
   `}
 `
 
-export const ProjectCard = ({heading, sub, imgUrl}) => {
+export const ProjectCard = ({heading, sub, imgUrl, useColor}) => {
     return (
-        <Container>
+        <Container >
             <Image src={imgUrl}/>
-            <Bottom>
+            <Bottom color={useColor}>
                 <MainText>{heading}</MainText>
                 <SubText>{sub}</SubText>
             </Bottom>

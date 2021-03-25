@@ -6,7 +6,6 @@ import { Footer } from "../components/organisms/Footer";
 import Man1 from '../components/atoms/SVGImages/Man1.svg'
 import Man2 from '../components/atoms/SVGImages/Man2.svg'
 import Man3 from '../components/atoms/SVGImages/Man2.svg'
-import { Navbar } from '../components/organisms/Navbar';
 import One from '../assets/images/one.jpg';
 import Phone from '../assets/images/phone.png'
 import { ProjectCard } from "../components/molecules/ProjectCard";
@@ -41,22 +40,10 @@ button{
 }
 `;
 
-const AbsoluteBox = styled.div`
-  position: absolute;
-  top: -120px;
-  left: 0;
-  right: 0;
-  display: block;
-  transform: translate(10%, -40%);
-  @media (max-width: 500px){
-    top: -180px;
-}
- `
 
 const Home = () => {
     return (
         <Container>
-           <Navbar/>
             <Box my={30} mx={30} sx={{
                 '@media screen and (max-width: 816px)': {
                padding: '0',
@@ -95,21 +82,21 @@ const Home = () => {
                         gridRow: '1',
                         }
                 }}>
-                <ProjectLinkCard text='Web Design' link={One}/>
+                <ProjectLinkCard text='Web Design' image={One} link='/webdesign'/>
                 </Box>
                 <Box sx={{gridColumn: '2',
                         gridRow: '1 / 2', '@media screen and (max-width: 816px)': {
                             gridColumn: '1',
                         gridRow: '2',
                     }}}>
-                <ProjectLinkCard text='App Design' link={Two}/>
+                <ProjectLinkCard text='App Design' image={Two}/>
                 </Box>
                 <Box sx={{gridColumn: '2',
                         gridRow: '2 / 2', '@media screen and (max-width: 816px)': {
                             gridColumn: '1',
                         gridRow: '3',
                     }}}>
-                <ProjectLinkCard text='Graphics Design' link={Three}/>
+                <ProjectLinkCard text='Graphics Design' image={Three}/>
                 </Box>
            </Box>
            <Flex mt={100} mb={300} mx={30} sx={{
@@ -129,26 +116,6 @@ const Home = () => {
                 give them the best experience a company
                  can provide.' imgUrl={Man3}/>
            </Flex>
-           <Footer>
-           <AbsoluteBox>
-             <Card width='80'>
-            
-             <Box justifyContent='space-between' alignItems='center' display='flex' px={60} sx={{
-                '@media screen and (max-width: 816px)': {
-                padding: '0',
-                flexDirection: 'column'
-        }}}>
-                            <Box display='flex'  flexDirection='column'  px={60}>
-                            <Header>Let’s talk about your project</Header>
-                            <SubHeader>Ready to take it to the next level? Contact us today and find out how our expertise can help your business grow.</SubHeader>
-                            
-                        </Box>
-                        <Button alt>Get in touch</Button>
-                </Box>
-             
-            </Card>  
-            </AbsoluteBox>
-          </Footer>
         </Container>
     )
 }

@@ -2,15 +2,15 @@ import { Box } from 'rebass'
 import PropTypes from 'prop-types';
 import React from 'react'
 import Right from '../atoms/icons/Right'
-import image from '../../assets/images/one.jpg';
 import styled from '@emotion/styled'
 
 const Container = styled.div`
     width: 100%;
     height: 100%;
-    padding: 10rem 4rem;
+    padding: 16rem 4rem;
     border-radius: 2rem;
     position: relative;
+    margin: ${(props) => props.margin}rem;
 `
 const MainText = styled.div`
     text-transform: uppercase;
@@ -44,7 +44,7 @@ const Overlay = styled.div`
     border-radius: 2rem;
 `
 const Image = styled.div`
-    background: url(${(props)=>props.link}) no-repeat center center;
+    background: url(${(props)=>props.imageLink}) no-repeat center center;
     position: absolute;
     top:0;
     left: 0;
@@ -56,10 +56,10 @@ const Image = styled.div`
     background-size: cover;
  `
 
-export const ProjectLinkCard = ({text, link}) => {
+export const ProjectLinkCard = ({text, image, link, margin}) => {
     return (
-        <Container>
-            <Image link={link}/>
+        <Container margin={margin}>
+            <Image imageLink={image}/>
            <Overlay>
            <MainText>{text}</MainText>
           <Box display="flex" justifyContent="space-between" >
