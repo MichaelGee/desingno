@@ -5,6 +5,7 @@ import { PageWrapper } from './components/organisms/PageWrapper';
 
 const Home = lazy(()=> import('./pages/Home'));
 const WebDesign = lazy(()=> import('./pages/WebDesign'));
+const AppDesign = lazy(() => import('./pages/AppDesign'));
 
 
 const RouterComponent =()=>{
@@ -15,6 +16,7 @@ const RouterComponent =()=>{
             <PageWrapper>
             <Route exact path="/" component={Home} />
             <Route path="/webdesign" component={WebDesign}/>
+            <Route path="/appdesign" component={AppDesign} />
             </PageWrapper>
         </Switch>
         </Suspense>

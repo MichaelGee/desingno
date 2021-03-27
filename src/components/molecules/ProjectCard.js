@@ -27,7 +27,7 @@ const Bottom  = styled.div`
    text-align:center;
    border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-   
+  width: 100%;
 `;
 const MainText = styled.h1`
     font-size: ${({theme}) => theme.font.size.normal};

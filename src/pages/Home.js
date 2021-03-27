@@ -47,20 +47,17 @@ const Home = () => {
             <Box my={30} mx={30} sx={{
                 '@media screen and (max-width: 816px)': {
                padding: '0',
-               margin: '30px 0',
-        }}}>
+               margin: '30px 0',}}}>
                 <Card>
                     <Box justifyContent='space-between' alignItems='center' display='flex' px={60} sx={{
                 '@media screen and (max-width: 816px)': {
-                flexDirection: 'column',
-        }}} >
+                flexDirection: 'column',}}} >
                         <Box flexDirection='column' px={60} sx={{
                 '@media screen and (max-width: 816px)': {
                 display: 'flex',
                 alignItems:'center',
                 justifyContent: 'center',
-                textAlign: 'center'
-        }}}>
+                textAlign: 'center'}}}>
                             <Header>Award-winning custom designs and digital branding solutions</Header>
                             <SubHeader>With over 10 years in the industry, we are experienced in creating fully responsive websites, app design, and engaging brand experiences. Find out more about our services.</SubHeader>
                             <Button alt>Learn More</Button>
@@ -73,29 +70,20 @@ const Home = () => {
            <Box my={100} mx={30} sx={{
             display: 'grid',
             gridGap: 3,
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            }}>
-                <Box sx={{    gridColumn: '1',
-                        gridRow: '1 / 3',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',}}>
+                <Box sx={{  gridColumn: '1', gridRow: '1 / 3',
                         '@media screen and (max-width: 816px)': {
-                            gridColumn: '1',
-                        gridRow: '1',
-                        }
-                }}>
+                            gridColumn: '1', gridRow: '1', }}}>
                 <ProjectLinkCard text='Web Design' image={One} link='/webdesign'/>
                 </Box>
                 <Box sx={{gridColumn: '2',
                         gridRow: '1 / 2', '@media screen and (max-width: 816px)': {
-                            gridColumn: '1',
-                        gridRow: '2',
-                    }}}>
-                <ProjectLinkCard text='App Design' image={Two}/>
+                            gridColumn: '1', gridRow: '2', }}}>
+                <ProjectLinkCard text='App Design' image={Two}  link='/appdesign'/>
                 </Box>
                 <Box sx={{gridColumn: '2',
                         gridRow: '2 / 2', '@media screen and (max-width: 816px)': {
-                            gridColumn: '1',
-                        gridRow: '3',
-                    }}}>
+                        gridColumn: '1', gridRow: '3', }}}>
                 <ProjectLinkCard text='Graphics Design' image={Three}/>
                 </Box>
            </Box>
