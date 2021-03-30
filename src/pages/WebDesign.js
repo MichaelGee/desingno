@@ -61,8 +61,8 @@ const WebDesign = () => {
                 '@media screen and (max-width: 816px)': {
                     flexDirection:'column'
         }}}>
-                    <ProjectLinkCard text='App Design' image={Two} margin='1'/>
-                    <ProjectLinkCard text='Graphics Design' image={Three} margin='1'/>
+                    <ProjectLinkCard text='App Design' image={Two} link='/appdesign' margin='1'/>
+                    <ProjectLinkCard text='Graphics Design' image={Three} link='/graphicsdesign' margin='1'/>
            </Box>
         </Container>
     )

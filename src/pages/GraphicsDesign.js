@@ -5,11 +5,9 @@ import { ProjectLinkCard } from '../components/molecules/ProjectLinkCard';
 import React from 'react'
 import Three from '../assets/images/three.jpg';
 import Two from '../assets/images/two.jpg';
-import appPic1 from '../assets/images/App/appPic1.png';
-import appPic2 from '../assets/images/App/appPic2.png';
-import appPic3 from '../assets/images/App/appPic3.png';
-import appPic4 from '../assets/images/App/appPic4.png';
-import appPic5 from '../assets/images/App/appPic5.png';
+import graphPic1 from '../assets/images/Graphics/graphPic1.png';
+import graphPic2 from '../assets/images/Graphics/graphPic2.png';
+import graphPic3 from '../assets/images/Graphics/graphPic3.png';
 import styled from '@emotion/styled'
 
 const Container = styled.div`
@@ -27,7 +25,7 @@ margin: 1.2rem 0;
 font-weight: 300;
 `;
 
-const AppDesign = () => {
+const GraphicsDesign = () => {
     return (
         <Container>
          
@@ -38,8 +36,8 @@ const AppDesign = () => {
         }}}>
                  <Card>
                     <Box flexDirection='column' textAlign='center'>
-                    <Header>App Design</Header>
-                    <SubHeader>Our mobile designs bring intuitive digital solutions to your customers right at their fingertips.</SubHeader>
+                    <Header>Graphic Design</Header>
+                    <SubHeader>We deliver eye-catching branding materials that are tailored to meet your business objectives.</SubHeader>
                     </Box>
                   </Card>
               </Box>
@@ -48,22 +46,20 @@ const AppDesign = () => {
             gridGap: 60,
             gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
             }}>
-               <ProjectCard heading='AIRFILTER' sub='Solving the problem of poor indoor air quality by filtering the air' imgUrl={appPic5} useColor={true}/>
-               <ProjectCard heading='EYECAM' sub='Product that lets you edit your favorite photos and videos at any time' imgUrl={appPic1} useColor={true}/>
-               <ProjectCard heading='FACEIT' sub='Get to meet your favorite internet superstar with the faceit app' imgUrl={appPic2} useColor={true}/>
-               <ProjectCard heading='TODO' sub='A todo app that features cloud sync with light and dark mode' imgUrl={appPic3} useColor={true}/>
-               <ProjectCard heading='LOOPSTUDIOS' sub='A VR experience app made for Loopstudios' imgUrl={appPic4} useColor={true}/>
+               <ProjectCard heading='TIM BROWN' sub='A book cover designed for Tim Brown’s new release, ‘Change’' imgUrl={graphPic2} useColor={true}/>
+               <ProjectCard heading='BOXED WATER' sub='A simple packaging concept made for Boxed Water' imgUrl={graphPic1} useColor={true}/>
+               <ProjectCard heading='SCIENCE!' sub='A poster made in collaboration with the Federal Art Project' imgUrl={graphPic3} useColor={true}/>
            </Box>
 
            <Box display='flex' flexDirection='row' mt={100} mb={400} mx={30} sx={{
                 '@media screen and (max-width: 816px)': {
                     flexDirection:'column'
         }}}>
-                    <ProjectLinkCard text='Web Design' image={Two} link='/webdesign' margin='1'/>
-                    <ProjectLinkCard text='Graphics Design' image={Three} link='/graphicsdesign' margin='1'/>
+                    <ProjectLinkCard text='App Design' image={Two} link='/appdesign' margin='1'/>
+                    <ProjectLinkCard text='Web Design' image={Three} link='/webdesign' margin='1'/>
            </Box>
         </Container>
     )
 }
 
-export default AppDesign;
+export default GraphicsDesign;

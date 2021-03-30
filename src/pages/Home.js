@@ -84,7 +84,7 @@ const Home = () => {
                 <Box sx={{gridColumn: '2',
                         gridRow: '2 / 2', '@media screen and (max-width: 816px)': {
                         gridColumn: '1', gridRow: '3', }}}>
-                <ProjectLinkCard text='Graphics Design' image={Three}/>
+                <ProjectLinkCard text='Graphics Design' image={Three} link='/graphicsdesign'/>
                 </Box>
            </Box>
            <Flex mt={100} mb={300} mx={30} sx={{
